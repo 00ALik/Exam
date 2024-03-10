@@ -1,0 +1,83 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div>
+      <span>
+        <label for="" class="me-2">امتحاني</label>
+        <i class="fa-solid fa-graduation-cap"></i>
+      </span>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
+        <li class="nav-item" routerLink="./subject">
+          <a class="nav-link" *ngIf="Users !== null">المواد</a>
+        </li>
+
+        <li class="nav-item" *ngIf="Users?.role =='Doctor' ">
+          <a class="nav-link" routerLink="/student">الطلاب</a>
+        </li>
+
+        <li class="nav-item" *ngIf="Users?.role =='Doctor' ">
+          <a class="nav-link" routerLink="./exam">اختبارجديد</a>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown" *ngIf="Users !== null">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="me-2 username" *ngIf="Users !== null">
+              {{Users?.username}}
+            </span>
+            <i class="fa-solid fa-user"> </i>
+          </a>
+          <ul class="dropdown-menu ms-auto" aria-labelledby="navbarDropdown">
+            <li>
+              <a
+                *ngIf="Users == null"
+                class="dropdown-item"
+                routerLink="./register"
+                >انشاء حساب جديد
+              </a>
+            </li>
+            <li>
+              <a
+                *ngIf="Users == null"
+                class="dropdown-item"
+                routerLink="./login"
+                >تسجيل الدخول
+              </a>
+            </li>
+
+            <li (click)="logOut()">
+              <a class="dropdown-item" routerLink="./login">تسجيل الخروج </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

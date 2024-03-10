@@ -1,0 +1,158 @@
+{
+  "students": [
+    {
+      "username": "علي الركابي",
+      "email": "a@a.a",
+      "password": "12",
+      "subjects": [
+        {
+          "name": "الرياضيات",
+          "id": "5ef8",
+          "degree": 1
+        }
+      ],
+      "id": "953c"
+    },
+    {
+      "id": "b2c0",
+      "username": "علي الركابي 2",
+      "email": "a@a.a2",
+      "password": "12",
+      "confirmpassword": "12"
+    }
+  ],
+  "Doctor": [
+    {
+      "id": "7419",
+      "username": "صصثض",
+      "email": "adf@d.com",
+      "password": "123",
+      "confirmpassword": "123"
+    },
+    {
+      "id": "f1ac",
+      "username": "admin",
+      "email": "admin@admin.com",
+      "password": "12",
+      "confirmpassword": "12"
+    }
+  ],
+  "login": [
+    {
+      "id": "1"
+    }
+  ],
+  "subjects": [
+    {
+      "id": "5ef8",
+      "name": "الرياضيات",
+      "questions": [
+        {
+          "question": "5",
+          "anser1": "5",
+          "anser2": "5",
+          "anser3": "5",
+          "anser4": "5",
+          "correctAnser": "5"
+        }
+      ]
+    },
+    {
+      "id": "193a",
+      "name": "انكليزي",
+      "questions": [
+        {
+          "question": "من هو الاعب العراقي الذي سجل في 2007",
+          "anser1": "يونس ممحمود",
+          "anser2": "يونس ممحمود",
+          "anser3": "يونس ممحمود",
+          "anser4": "يونس ممحمود",
+          "correctAnser": "يونس ممحمود"
+        }
+      ]
+    },
+    {
+      "id": "9eb0",
+      "name": "جغرافيه ",
+      "questions": [
+        {
+          "question": "كم تبلغ مساحة العراق الجغرافيه :؟",
+          "anser1": "73%",
+          "anser2": "73%",
+          "anser3": "73%",
+          "anser4": "73%",
+          "correctAnser": "73%"
+        }
+      ]
+    },
+    {
+      "id": "2cc3",
+      "name": "تاريخ ",
+      "questions": [
+        {
+          "question": "من هو فارس الشام",
+          "anser1": "المختار",
+          "anser2": "المختار",
+          "anser3": "المختار",
+          "anser4": "المختار",
+          "correctAnser": "المختار"
+        }
+      ]
+    },
+    {
+      "id": "aaa2",
+      "name": "احصاء",
+      "questions": [
+        {
+          "question": "كم تبلغ نسبه 5%",
+          "anser1": "1",
+          "anser2": "1",
+          "anser3": "1",
+          "anser4": "1",
+          "correctAnser": "2"
+        }
+      ]
+    },
+    {
+      "id": "0f8e",
+      "name": "جغرافيه",
+      "questions": [
+        {
+          "question": "56",
+          "anser1": "3",
+          "anser2": "3",
+          "anser3": "3",
+          "anser4": "3",
+          "correctAnser": "8"
+        }
+      ]
+    },
+    {
+      "name": "تاريخ",
+      "questions": [],
+      "id": "a518"
+    },
+    {
+      "id": "0aab",
+      "name": "الرياضه ",
+      "questions": [
+        {
+          "question": "كم لعبه في الرياضيه ",
+          "anser1": "10",
+          "anser2": "3",
+          "anser3": "40",
+          "anser4": "43",
+          "correctAnser": "10"
+        },
+        {
+          "question": "كم لاعب تتكون لعبه الطائره ",
+          "anser1": "5",
+          "anser2": "6",
+          "anser3": "7",
+          "anser4": "9",
+          "correctAnser": "7"
+        }
+      ]
+    }
+  ]
+}

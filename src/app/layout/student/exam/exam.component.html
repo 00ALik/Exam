@@ -1,0 +1,80 @@
+<div class="examBox">
+  <div class="examhead text-center"><h2>اختبار {{allSubjectId?.name}}</h2></div>
+  <div
+    class="quizBox"
+    *ngFor="let item of allSubjectId?.questions; let index = index"
+  >
+    <strong
+      ><span class="text-danger">السؤال{{index +1}} :</span>
+      {{item.question}}</strong
+    >
+    <div class="row mt-3">
+      <div class="col-md-6 col-sm-12">
+        <mat-radio-button
+          *ngIf="User?.role == 'students' && !showResult && valiExam"
+          (change)="getResualt($event)"
+          name="{{index}}"
+          value="{{item.anser1}}"
+          color="warn"
+        ></mat-radio-button>
+        A. <label>{{item.anser1}}</label>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <mat-radio-button
+          *ngIf="User?.role == 'students' && !showResult && valiExam "
+          (change)="getResualt($event)"
+          name="{{index}}"
+          value="{{item.anser2}}"
+          color="warn"
+        ></mat-radio-button>
+        B.<label>{{item.anser2}}</label>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <mat-radio-button
+          *ngIf="User?.role == 'students' && !showResult && valiExam "
+          (change)="getResualt($event)"
+          name="{{index}}"
+          value="{{item.anser3}}"
+          color="warn"
+        ></mat-radio-button>
+        C.<label>{{item.anser3}}</label>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <mat-radio-button
+          *ngIf="User?.role == 'students' && !showResult && valiExam "
+          (change)="getResualt($event)"
+          name="{{index}}"
+          value="{{item.anser4}}"
+          color="warn"
+        ></mat-radio-button>
+        D. <label>{{item.anser4}}</label>
+      </div>
+    </div>
+
+    <div class="text-right" *ngIf="User?.role == 'Doctor' ">
+      <button
+        mat-raised-button
+        class="btn btn-danger"
+        (click)="deleteQuestion(index)"
+      >
+        حذف
+      </button>
+    </div>
+    <hr />
+  </div>
+  <div class="text-center" *ngIf="User?.role == 'students' ">
+    <span *ngIf="showResult || !valiExam" class="fs-4 text-success"
+      >{{allSubjectId?.questions.length}} / {{totalAnser}}</span
+    >
+    <button
+      *ngIf="!showResult && valiExam"
+      class="btn btn-success px-5 fs-5"
+      (click)="getResulat()"
+    >
+      النتيجه
+    </button>
+  </div>
+</div>

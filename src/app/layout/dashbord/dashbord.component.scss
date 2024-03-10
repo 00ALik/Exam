@@ -1,0 +1,29 @@
+.navbar-expand-lg{
+    background-color: bisque;
+    height: 50px;
+}
+
+span{
+    label{
+        font-size: 18px;
+
+    }
+    i{
+        font-size: 18px;
+    }
+  
+
+}
+
+
+
+.nav-link{
+    font-size: 18px;
+    font-style: normal;
+    color: black;
+    cursor: pointer;
+}
+
+.navbar-nav .nav-link.dropdown-toggle::after {
+    display: none;
+}
